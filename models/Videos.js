@@ -1,27 +1,11 @@
 // INSTRUCTIONS
 /*
-  Create a new resource model that uses the User
-  as an associative collection (examples):
-  - User -> Books
-  - User -> Reservation
-
-  Your model must contain at least three attributes
-  other than the associated user and the timestamps.
-
-  Your model must have at least one helpful virtual
-  or query function. For example, you could have a
-  book's details output in an easy format: book.format()
-*/
-
-/*
   name/title
   video Url
   thumbnailUrl
   description
   association with user
   public/private
-
-
 */
 const mongoose = require('mongoose');
 
@@ -35,14 +19,14 @@ const VideoScema = new mongoose.Schema({
       type: String,
       required: true //you must have a title!
   },
-  content: {
+  VideoUrl: { //this will reference the video address in the files
       type: String,
-      required: false
+      required: true
   },
   status: {
       type: String,
-      enum: ['DRAFT', 'PUBLISHED'],
-      default: 'DRAFT'
+      enum: ['PUBLIC', 'PRIVATE'],
+      default: 'PRIVATE'
   }
 },{
   timestamps: true

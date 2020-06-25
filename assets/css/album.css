@@ -1,0 +1,124 @@
+
+
+:root {
+  --jumbotron-padding-y: 3rem;
+}
+
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+      padding-top: calc(var(--jumbotron-padding-y) * 2);
+      padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.flexbox-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flexbox-item {
+  min-height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  position: absolute;
+}
+
+.card-img-top {
+  max-height: 20rem;
+  align-self: center;
+}
+
+.video-description {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  visibility: hidden;
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 1.3em;
+}
+
+.image-description-div:hover {
+  -webkit-filter: grayscale(100%);
+}
+
+.image-description-div:hover > .video-description {
+  visibility: visible;
+}
+
+.upload-div{
+  visibility: hidden;
+  position: absolute; 
+  top: 10%; 
+  left: 30%; 
+  right: 30%;
+  background-color: rgba(218, 236, 255, 0.95); 
+  border-radius: 21px; 
+  padding: 12px;
+}
+.upload-button {
+  color: aliceblue !important;
+}
+.upload-button:active > .upload-div {
+  visibility: visible;
+}
+
+.close-upload-form {
+  cursor: pointer;
+  color: #007bff !important;
+}
+
+.form-upload {
+  width: 100%;
+  max-width: 660px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-upload .checkbox {
+  font-weight: 400;
+}
+.form-upload .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-upload .form-control:focus {
+  z-index: 2;
+}
+.form-upload input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}

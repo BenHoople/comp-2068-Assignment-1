@@ -72,7 +72,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 /*
-  Step 6: Setup our flash helper, default locals, and local helpers (like formData and authorized)
+  Step 6: Setup our flash helper, default locals, and local helpers (like formData and )
 */
 //use flash notifications, npm install connect-flash
 //and add defaults
@@ -88,8 +88,9 @@ app.use('/', (req, res, next) => {
     res.locals.formData = req.session.formData || {};
     req.session.formData = {};
 
-    res.locals.authorized = req.isAuthenticated();
-    if (res.locals.authorized) res.locals.email = req.session.passport.user;
+    res.locals.authorized  = req.isAuthenticated();
+    console.log(res.locals.authorized);
+    if (res.locals.authorized ) res.locals.email = req.session.passport.user;
     next();
 });
 

@@ -1,3 +1,23 @@
 <!--
   Step 1: The form must be sharable between the new and edit views.
 -->
+<div class="text-center upload-div">
+  <a class="close-upload-form"><i class="fa fa-times" style="margin-left: 90%;" aria-hidden="true"></i></a>
+  <form class="form-upload">
+    <img class="mb-4" src="/images/upload.png" alt="upload image picture" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Uploading...</h1>
+    <input type="title" id="inputEmail" class="form-control mb-3" placeholder="Video Title" required autofocus>
+    <textarea type="text" name="description" id="description" class="mb-3 form-control" placeholder="Video Description" required></textarea>
+    <input type="file" id="uploadFile" class="form-control mb-3" accept=".mp4" required>
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="termsAndConditions"> Make Video Public
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" value="termsAndConditions"> I Agree to the Terms and Conditions
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Up Load</button>
+  </form>
+</div>

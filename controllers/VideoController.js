@@ -116,6 +116,3 @@ exports.delete = async (req, res) => {
         res.redirect(`/blogs/${req.body.id}/edit`);
     }
 }
-
-
-
